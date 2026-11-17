@@ -21,13 +21,17 @@ export default function Hero({ ready }) {
     const ctx = gsap.context(() => {
       gsap.timeline({ defaults: { ease: 'expo.out' } })
         .from('.hero-letter', { yPercent: 110, duration: 1.4, stagger: 0.035 })
-        .from('.hero-photo', { clipPath: 'inset(100% 0 0 0)', duration: 1.6 }, 0.2)
-        .from('.hero-photo img', { scale: 1.35, duration: 2 }, 0.2)
+        .from('.hero-frame', { yPercent: 18, scale: 0.86, opacity: 0, duration: 1.6 }, 0.15)
+        .from('.hero-frame img', { scale: 1.35, duration: 2.2 }, 0.15)
+        .from('.hero-arch-line', { x: -10, y: -10, opacity: 0, duration: 1.6 }, 0.5)
+        .from('.hero-arch-glow', { x: 10, y: 10, opacity: 0, duration: 1.6 }, 0.5)
+        .from('.hero-spin', { scale: 0, rotate: -120, duration: 1.4, ease: 'back.out(1.6)' }, 0.9)
+        .from('.hero-chip, .hero-badge', { x: -30, opacity: 0, duration: 1, stagger: 0.12 }, 1)
         .from('.hero-fade', { y: 30, opacity: 0, duration: 1, stagger: 0.08 }, 0.6)
 
       // parallax on scroll
-      gsap.to('.hero-photo img', {
-        yPercent: 12, ease: 'none',
+      gsap.to('.hero-frame-inner', {
+        yPercent: 8, ease: 'none',
         scrollTrigger: { trigger: root.current, start: 'top top', end: 'bottom top', scrub: true },
       })
       gsap.to('.hero-name', {
@@ -35,7 +39,27 @@ export default function Hero({ ready }) {
         scrollTrigger: { trigger: root.current, start: 'top top', end: 'bottom top', scrub: true },
       })
     }, root)
-    return () => ctx.revert()
+
+    const photo = root.current.querySelector('.hero-photo')
+    const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches
+    let cleanupTilt = () => {}
+    if (photo && fine) {
+      const rx = gsap.quickTo('.hero-stage', 'rotationX', { duration: 0.8, ease: 'power3.out' })
+      const ry = gsap.quickTo('.hero-stage', 'rotationY', { duration: 0.8, ease: 'power3.out' })
+      const lx = gsap.quickTo('.hero-arch-line', 'x', { duration: 1, ease: 'power3.out' })
+      const ly = gsap.quickTo('.hero-arch-line', 'y', { duration: 1, ease: 'power3.out' })
+      const move = (e) => {
+        const r = photo.getBoundingClientRect()
+        const px = (e.clientX - r.left) / r.width - 0.5
+        const py = (e.clientY - r.top) / r.height - 0.5
+        ry(px * 10); rx(-py * 8); lx(22 + px * 18); ly(22 + py * 18)
+      }
+      const leave = () => { rx(0); ry(0); lx(22); ly(22) }
+      photo.addEventListener('pointermove', move)
+      photo.addEventListener('pointerleave', leave)
+      cleanupTilt = () => { photo.removeEventListener('pointermove', move); photo.removeEventListener('pointerleave', leave) }
+    }
+    return () => { cleanupTilt(); ctx.revert() }
   }, [ready])
 
   return (
@@ -59,10 +83,32 @@ export default function Hero({ ready }) {
         </div>
 
         <figure className="hero-photo">
-          <img src={asset(profile.photo)} alt={`Portrait of ${profile.name} ${profile.surname}`} width="1080" height="1440" fetchPriority="high" />
-          <figcaption className="hero-badge">
-            <span className="dot" /> Based in {profile.location}
-          </figcaption>
+          <div className="hero-stage">
+            <span className="hero-arch hero-arch-glow" aria-hidden="true" />
+            <span className="hero-arch hero-arch-line" aria-hidden="true" />
+            <div className="hero-frame">
+              <div className="hero-frame-inner">
+                <img src={asset(profile.photo)} alt={`Portrait of ${profile.name} ${profile.surname}`} width="1080" height="1440" fetchPriority="high" />
+              </div>
+            </div>
+
+            <div className="hero-chip" aria-hidden="true">
+              <strong>95.7%</strong>
+              <span>Recall@5 in my thesis</span>
+            </div>
+
+            <a className="hero-spin" href="#about" aria-label="Scroll to About">
+              <svg className="ring" viewBox="0 0 124 124" aria-hidden="true">
+                <defs><path id="spin-path" d="M62,62 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" /></defs>
+                <text xmlSpace="preserve"><textPath href="#spin-path" textLength="286">AI and ML Engineer   Open to work   </textPath></text>
+              </svg>
+              <span className="hero-spin-core"><ArrowUpRight /></span>
+            </a>
+
+            <figcaption className="hero-badge">
+              <span className="dot" /> Based in {profile.location}
+            </figcaption>
+          </div>
         </figure>
       </div>
 
