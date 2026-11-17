@@ -8,6 +8,8 @@ import Marquee from './components/Marquee'
 import About from './components/About'
 import Thesis from './components/Thesis'
 import Projects from './components/Projects'
+import Journey from './components/Journey'
+import Skills from './components/Skills'
 
 export default function App() {
   const [ready, setReady] = useState(false)
@@ -34,6 +36,8 @@ export default function App() {
         <About />
         <Thesis />
         <Projects />
+        <Journey />
+        <Skills />
       </main>
     </>
   )
