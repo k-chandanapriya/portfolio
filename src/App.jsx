@@ -1,3 +1,32 @@
+import { useCallback, useEffect, useState } from 'react'
+import Lenis from 'lenis'
+import { gsap, ScrollTrigger, prefersReducedMotion } from './motion'
+import Loader from './components/Loader'
+import Nav from './components/Nav'
+import Hero from './components/Hero'
+
 export default function App() {
-  return <main>Portfolio — coming soon</main>
+  const [ready, setReady] = useState(false)
+  const onLoaded = useCallback(() => setReady(true), [])
+
+  // smooth scrolling, kept in sync with GSAP ScrollTrigger
+  useEffect(() => {
+    if (prefersReducedMotion()) return
+    const lenis = new Lenis({ duration: 1.15, anchors: true })
+    lenis.on('scroll', ScrollTrigger.update)
+    const tick = (t) => lenis.raf(t * 1000)
+    gsap.ticker.add(tick)
+    gsap.ticker.lagSmoothing(0)
+    return () => { gsap.ticker.remove(tick); lenis.destroy() }
+  }, [])
+
+  return (
+    <>
+      {!ready && <Loader onDone={onLoaded} />}
+      <Nav />
+      <main>
+        <Hero ready={ready} />
+      </main>
+    </>
+  )
 }
