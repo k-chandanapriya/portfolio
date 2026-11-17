@@ -25,8 +25,7 @@ export default function Hero({ ready }) {
         .from('.hero-frame img', { scale: 1.35, duration: 2.2 }, 0.15)
         .from('.hero-arch-line', { x: -10, y: -10, opacity: 0, duration: 1.6 }, 0.5)
         .from('.hero-arch-glow', { x: 10, y: 10, opacity: 0, duration: 1.6 }, 0.5)
-        .from('.hero-spin', { scale: 0, rotate: -120, duration: 1.4, ease: 'back.out(1.6)' }, 0.9)
-        .from('.hero-chip, .hero-badge', { x: -30, opacity: 0, duration: 1, stagger: 0.12 }, 1)
+        .from('.hero-badge', { x: -30, opacity: 0, duration: 1 }, 1)
         .from('.hero-fade', { y: 30, opacity: 0, duration: 1, stagger: 0.08 }, 0.6)
 
       // parallax on scroll
@@ -91,19 +90,6 @@ export default function Hero({ ready }) {
                 <img src={asset(profile.photo)} alt={`Portrait of ${profile.name} ${profile.surname}`} width="1080" height="1440" fetchPriority="high" />
               </div>
             </div>
-
-            <div className="hero-chip" aria-hidden="true">
-              <strong>95.7%</strong>
-              <span>Recall@5 in my thesis</span>
-            </div>
-
-            <a className="hero-spin" href="#about" aria-label="Scroll to About">
-              <svg className="ring" viewBox="0 0 124 124" aria-hidden="true">
-                <defs><path id="spin-path" d="M62,62 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" /></defs>
-                <text xmlSpace="preserve"><textPath href="#spin-path" textLength="286">AI and ML Engineer   Open to work   </textPath></text>
-              </svg>
-              <span className="hero-spin-core"><ArrowUpRight /></span>
-            </a>
 
             <figcaption className="hero-badge">
               <span className="dot" /> Based in {profile.location}
