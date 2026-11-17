@@ -12,7 +12,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/chandanapriyak',
   github: 'https://github.com/k-chandanapriya',
   cv: 'Chandana-Priya-Kummarigunta-CV.pdf',
-  photo: 'chandana.jpg?v=arch2',
+  photo: 'chandana.jpg?v=bright',
   intro:
     'I turn cutting-edge AI into products people can trust. I fine-tune large language models, build RAG systems that reach 95.7% Recall@5, and engineer real-time ML pipelines that score transactions in under 10 ms. Fast, accurate and ready for the real world.',
   about: [
