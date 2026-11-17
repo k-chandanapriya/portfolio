@@ -1,16 +1,36 @@
-# React + Vite
+# Chandana Priya Kummarigunta — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**Live site:** https://k-chandanapriya.github.io/portfolio/
 
-Currently, two official plugins are available:
+Personal portfolio of an AI & Machine Learning engineer (M.Sc. Applied Computer Science, SRH University Stuttgart), featuring my master's thesis: a **RAG Adaptive Multimodal AI Chatbot for Elderly Care**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Sections
 
-## React Compiler
+- **Hero** — intro loader, letter-by-letter name reveal, parallax portrait
+- **About** — profile and animated key numbers
+- **Master's thesis** — case study with a scroll-driven walkthrough of the hybrid RAG pipeline (FAISS + BM25 → RRF → cross-encoder → LoRA-tuned Gemini) and its results
+- **Projects** — FraudStream, ElderSense AI, DevSecOps pipeline, Satellite Tracker and more
+- **Journey** — experience and education timeline
+- **Skills** — toolkit grouped by area
+- **Contact** — email, LinkedIn, GitHub and CV download
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech
 
-## Expanding the Oxlint configuration
+React 19 · Vite · GSAP + ScrollTrigger · Lenis smooth scrolling · plain CSS. Respects `prefers-reduced-motion`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Then open http://localhost:5173/portfolio/.
+
+## Update content
+
+All text lives in [`src/data.js`](src/data.js). The photo and CV are in [`public/`](public/).
+
+## Deployment
+
+Every push to `main` builds and deploys to GitHub Pages via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
