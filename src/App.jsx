@@ -4,6 +4,8 @@ import { gsap, ScrollTrigger, prefersReducedMotion } from './motion'
 import Loader from './components/Loader'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
+import Marquee from './components/Marquee'
+import About from './components/About'
 
 export default function App() {
   const [ready, setReady] = useState(false)
@@ -26,6 +28,8 @@ export default function App() {
       <Nav />
       <main>
         <Hero ready={ready} />
+        <Marquee />
+        <About />
       </main>
     </>
   )
