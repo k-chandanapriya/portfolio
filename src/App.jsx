@@ -7,6 +7,7 @@ import Hero from './components/Hero'
 import Marquee from './components/Marquee'
 import About from './components/About'
 import Thesis from './components/Thesis'
+import Projects from './components/Projects'
 
 export default function App() {
   const [ready, setReady] = useState(false)
@@ -32,6 +33,7 @@ export default function App() {
         <Marquee />
         <About />
         <Thesis />
+        <Projects />
       </main>
     </>
   )
