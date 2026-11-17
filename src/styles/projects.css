@@ -18,7 +18,7 @@
 .work-index { font-family: var(--mono); color: var(--accent); font-size: 14px; }
 .work-card-main { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 64px); align-items: start; }
 .work-card h3, .work-mini h3 {
-  font-family: var(--serif); font-weight: 400; font-size: clamp(44px, 6vw, 92px); line-height: 0.95; letter-spacing: -0.02em;
+  font-family: var(--serif); font-weight: 500; font-size: clamp(38px, 5vw, 76px); line-height: 1; letter-spacing: -0.03em;
 }
 .work-sub { color: var(--accent); margin-top: 12px; font-size: 15px; }
 .work-desc { color: var(--muted); font-size: clamp(15px, 1.2vw, 17px); }
@@ -39,7 +39,7 @@
   transition: border-color 0.4s var(--ease), transform 0.4s var(--ease);
 }
 .work-mini:hover { border-color: rgba(255, 90, 54, 0.45); transform: translateY(-4px); }
-.work-mini h3 { font-size: clamp(32px, 3.4vw, 48px); margin-top: 8px; }
+.work-mini h3 { font-size: clamp(28px, 3vw, 40px); margin-top: 8px; }
 .work-mini .work-sub { margin-top: -6px; }
 
 @media (max-width: 900px) {

@@ -13,8 +13,8 @@
   align-items: center; position: relative;
 }
 .hero-name {
-  font-family: var(--serif); font-weight: 400;
-  font-size: clamp(72px, 13vw, 210px); line-height: 0.86; letter-spacing: -0.035em;
+  font-family: var(--serif); font-weight: 600;
+  font-size: clamp(60px, 10vw, 164px); line-height: 0.92; letter-spacing: -0.045em;
   margin: 24px 0 28px;
 }
 .hero-name em { color: var(--accent); }
