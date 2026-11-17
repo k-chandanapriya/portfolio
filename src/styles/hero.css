@@ -20,7 +20,7 @@
 .hero-name em { color: var(--accent); }
 .hero-letter { display: inline-block; will-change: transform; }
 .hero-role { font-size: clamp(16px, 1.5vw, 20px); font-weight: 500; }
-.hero-role span { color: var(--accent); margin: 0 6px; }
+.hero-sep { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin: 0 10px 3px; vertical-align: middle; }
 .hero-intro { color: var(--muted); max-width: 560px; margin-top: 14px; font-size: clamp(15px, 1.2vw, 17px); }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
 

@@ -34,7 +34,7 @@ export default function Thesis() {
   return (
     <section className="section thesis" id="thesis" ref={root}>
       <div className="container">
-        <p className="eyebrow reveal">Featured · {thesis.kicker}</p>
+        <p className="eyebrow reveal">{thesis.kicker}</p>
         <h2 className="section-title thesis-title">
           <span className="line-mask"><span className="line-inner">RAG Adaptive</span></span>
           <span className="line-mask"><span className="line-inner"><em>Multimodal</em> AI Chatbot</span></span>

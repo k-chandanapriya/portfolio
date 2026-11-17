@@ -7,7 +7,7 @@ export default function Marquee() {
     <div className="marquee" aria-hidden="true">
       <div className="marquee-track">
         {row.map((word, i) => (
-          <span key={i}>{word}<i>✦</i></span>
+          <span key={i}>{word}<i aria-hidden="true" /></span>
         ))}
       </div>
     </div>

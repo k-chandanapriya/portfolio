@@ -11,5 +11,5 @@
   white-space: nowrap;
 }
 .marquee span:nth-child(even) { font-style: italic; color: var(--muted); }
-.marquee i { font-style: normal; color: var(--accent); font-size: 0.5em; }
+.marquee i { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
 @keyframes marquee { to { transform: translateX(-50%); } }

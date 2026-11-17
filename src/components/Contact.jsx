@@ -15,7 +15,7 @@ export default function Contact() {
       await navigator.clipboard.writeText(profile.email)
       setCopied(true)
       setTimeout(() => setCopied(false), 1800)
-    } catch { /* clipboard unavailable — the mailto link still works */ }
+    } catch { /* clipboard unavailable; the mailto link still works */ }
   }
 
   return (
@@ -28,7 +28,7 @@ export default function Contact() {
           <span className="line-mask"><span className="line-inner"><em>something</em> smart.</span></span>
         </h2>
         <p className="contact-lede reveal">
-          I'm looking for entry-level roles in AI/ML engineering, data science or software development in Germany — and I'm open to relocation.
+          I'm looking for entry-level roles in AI/ML engineering, data science or software development in Germany, and I'm open to relocation.
         </p>
 
         <div className="contact-email reveal">

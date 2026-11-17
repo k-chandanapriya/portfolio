@@ -45,7 +45,7 @@ export default function Hero({ ready }) {
             <span className="line-mask" aria-hidden="true"><em><Letters text="Priya" /></em></span>
           </h1>
           <p className="hero-role hero-fade">
-            {profile.role} <span>·</span> {profile.degree}
+            {profile.role} <span className="hero-sep" aria-hidden="true" /> {profile.degree}
           </p>
           <p className="hero-intro hero-fade">{profile.intro}</p>
           <div className="hero-ctas hero-fade">
@@ -65,7 +65,7 @@ export default function Hero({ ready }) {
       <div className="container hero-foot hero-fade">
         <span>Scroll</span>
         <span className="hero-line" />
-        <span>LLMs · RAG · Multimodal AI · MLOps</span>
+        <span>LLMs, RAG, Multimodal AI, MLOps</span>
       </div>
     </section>
   )

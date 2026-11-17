@@ -1,5 +1,5 @@
 // All portfolio content lives here, taken from the CV (November 2026).
-// Edit this file to update the site — no component changes needed.
+// Edit this file to update the site. No component changes needed.
 
 export const profile = {
   name: 'Chandana Priya',
@@ -7,17 +7,17 @@ export const profile = {
   role: 'AI & Machine Learning Engineer',
   degree: 'M.Sc. Applied Computer Science',
   location: 'Stuttgart, Germany',
-  availability: 'Open to entry-level AI/ML roles · Open to relocation',
+  availability: 'Open to entry-level AI/ML roles and relocation',
   email: 'chandanapriya.k2002@gmail.com',
   linkedin: 'https://www.linkedin.com/in/chandanapriyak',
   github: 'https://github.com/k-chandanapriya',
   cv: 'Chandana-Priya-Kummarigunta-CV.pdf',
   photo: 'chandana.jpg',
   intro:
-    'I build AI systems that hold up outside the notebook — LLM fine-tuning, retrieval-augmented generation and multimodal assistants on Google Cloud, plus real-time ML pipelines with Kafka and FastAPI.',
+    'I turn cutting-edge AI into products people can trust. I fine-tune large language models, build RAG systems that reach 95.7% Recall@5, and engineer real-time ML pipelines that score transactions in under 10 ms. Fast, accurate and ready for the real world.',
   about: [
     'Computer scientist with an M.Sc. in Applied Computer Science from SRH University Stuttgart, specialising in LLM fine-tuning, Retrieval-Augmented Generation (RAG) and multimodal AI.',
-    'I care about measurable results — retrieval quality, model accuracy, latency and security — and I approach every system with a systematic, experimental mindset. I am looking for an entry-level role in AI/ML engineering, data science or software development in Germany.',
+    'I care about measurable results: retrieval quality, model accuracy, latency and security. I approach every system with a systematic, experimental mindset. I am looking for an entry-level role in AI/ML engineering, data science or software development in Germany.',
   ],
 }
 
@@ -29,10 +29,10 @@ export const stats = [
 ]
 
 export const thesis = {
-  kicker: "Master's Thesis · SRH University Stuttgart · 2026",
+  kicker: "Master's Thesis, SRH University Stuttgart, 2026",
   title: 'RAG Adaptive Multimodal AI Chatbot for Elderly Care',
   summary:
-    'A dual-interface multimodal assistant — speech, text-to-speech and image-based medication input — that grounds Gemini responses in domain-specific medical knowledge for elderly users and their caregivers.',
+    'A dual-interface multimodal assistant that listens, speaks and reads photos of medication, grounding every Gemini answer in trusted medical knowledge for elderly users and their caregivers.',
   pipeline: [
     { step: '01', name: 'Chunking', detail: '512-token chunks of curated medical knowledge' },
     { step: '02', name: 'Embeddings', detail: 'Sentence-transformer vectors' },
@@ -54,7 +54,7 @@ export const thesis = {
     'Designed GCP IAM hardening, Vision / Document AI prescription recognition and event-driven alerts with Pub/Sub and Cloud Scheduler.',
   ],
   stack: [
-    'Python', 'LangChain', 'FAISS', 'BM25', 'Vertex AI · Gemini', 'Speech-to-Text', 'Text-to-Speech',
+    'Python', 'LangChain', 'FAISS', 'BM25', 'Vertex AI (Gemini)', 'Speech-to-Text', 'Text-to-Speech',
     'Vision AI', 'Document AI', 'Cloud Run', 'Firestore', 'Pub/Sub', 'BigQuery', 'React', 'FastAPI',
   ],
 }
@@ -73,7 +73,7 @@ export const projects = [
   {
     title: 'ElderSense AI',
     subtitle: 'Multilingual elderly healthcare chatbot',
-    tag: "Master's research project · 2025–2026",
+    tag: "Master's research project, 2025 to 2026",
     description:
       'Gemini 1.5 Flash fine-tuned on Vertex AI through a full JSONL-to-endpoint deployment pipeline, answering in German, Spanish, Hindi and more. React + FastAPI architecture with IAM-secured REST APIs and Cloud Text-to-Speech.',
     metrics: ['Sub-2 s average response', 'Multilingual', 'IAM-secured APIs'],
@@ -82,7 +82,7 @@ export const projects = [
   {
     title: 'DevSecOps Pipeline',
     subtitle: 'Quality & security gates for TensorFlow projects',
-    tag: '2024 · DevSecOps engineer',
+    tag: '2024, DevSecOps engineer',
     description:
       'A CI/CD pipeline combining SonarQube static analysis, Bandit security linting and Trivy container scanning, with automated JSON reports so failing quality gates are visible before merge.',
     metrics: ['50+ CVE checks per build', '~40% less manual review'],
@@ -120,7 +120,7 @@ export const projects = [
 
 export const timeline = [
   {
-    period: '10/2024 – 2026',
+    period: 'Oct 2024 to 2026',
     title: 'M.Sc. Applied Computer Science',
     place: 'SRH University Stuttgart, Germany',
     kind: 'Education',
@@ -130,7 +130,7 @@ export const timeline = [
     ],
   },
   {
-    period: '01/2024 – 06/2024',
+    period: 'Jan 2024 to Jun 2024',
     title: 'Python Developer Intern',
     place: 'Vilindha Technologies, India',
     kind: 'Experience',
@@ -141,7 +141,7 @@ export const timeline = [
     ],
   },
   {
-    period: '08/2020 – 04/2024',
+    period: 'Aug 2020 to Apr 2024',
     title: 'B.Sc. Computer Science Engineering',
     place: 'Kuppam Engineering College, India',
     kind: 'Education',
@@ -152,7 +152,7 @@ export const timeline = [
 export const skills = [
   { group: 'LLMs & Generative AI', items: ['LLM fine-tuning (LoRA)', 'RAG', 'LangChain', 'Gemini (Vertex AI)', 'OpenAI API', 'Prompt engineering'] },
   { group: 'Information Retrieval', items: ['FAISS', 'BM25', 'Hybrid search', 'Reciprocal Rank Fusion', 'Sentence-transformers', 'Cross-encoder reranking'] },
-  { group: 'Machine Learning', items: ['XGBoost', 'TensorFlow', 'PyTorch (fundamentals)', 'Deep learning', 'Feature engineering', 'Imbalanced data', 'Recall@k · PR-AUC · mAP'] },
+  { group: 'Machine Learning', items: ['XGBoost', 'TensorFlow', 'PyTorch (fundamentals)', 'Deep learning', 'Feature engineering', 'Imbalanced data', 'Recall@k, PR-AUC, mAP'] },
   { group: 'Programming', items: ['Python', 'Java', 'JavaScript', 'R', 'SQL'] },
   { group: 'Backend & Frontend', items: ['FastAPI', 'REST APIs', 'React.js', 'Streamlit'] },
   { group: 'Data & Streaming', items: ['Apache Kafka', 'BigQuery', 'Pub/Sub', 'Real-time pipelines'] },

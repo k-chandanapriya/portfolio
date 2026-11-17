@@ -59,7 +59,7 @@
 .thesis-highlights li {
   padding: 20px 0 20px 32px; border-top: 1px solid var(--line); position: relative; color: var(--text);
 }
-.thesis-highlights li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
+.thesis-highlights li::before { content: ''; position: absolute; left: 0; top: 31px; width: 14px; height: 2px; background: var(--accent); }
 .thesis-stack > div { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 
 @media (prefers-reduced-motion: reduce) {

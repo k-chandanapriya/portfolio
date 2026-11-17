@@ -41,7 +41,7 @@ export default function About() {
             {profile.about.map((p, i) => <p className="reveal" key={i}>{p}</p>)}
             <div className="about-langs reveal">
               {languages.map((l) => (
-                <span className="chip" key={l.name}>{l.name} — {l.level}</span>
+                <span className="chip" key={l.name}>{l.name} ({l.level})</span>
               ))}
             </div>
           </div>
