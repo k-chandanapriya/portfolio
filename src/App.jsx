@@ -6,6 +6,7 @@ import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Marquee from './components/Marquee'
 import About from './components/About'
+import Thesis from './components/Thesis'
 
 export default function App() {
   const [ready, setReady] = useState(false)
@@ -30,6 +31,7 @@ export default function App() {
         <Hero ready={ready} />
         <Marquee />
         <About />
+        <Thesis />
       </main>
     </>
   )
