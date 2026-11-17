@@ -10,6 +10,7 @@ import Thesis from './components/Thesis'
 import Projects from './components/Projects'
 import Journey from './components/Journey'
 import Skills from './components/Skills'
+import Contact from './components/Contact'
 
 export default function App() {
   const [ready, setReady] = useState(false)
@@ -38,6 +39,7 @@ export default function App() {
         <Projects />
         <Journey />
         <Skills />
+        <Contact />
       </main>
     </>
   )
