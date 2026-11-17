@@ -76,5 +76,5 @@
   .pipe { padding-left: 52px; }
   .pipe-num { left: -52px; width: 38px; height: 38px; }
   .pipe-rail { left: 18px; }
-  .pipe-step { padding: 20px; }
+  .pipe-step { padding: 20px; transform: none; }
 }
