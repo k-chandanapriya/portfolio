@@ -30,7 +30,7 @@ export default function Hero({ ready }) {
 
       // parallax on scroll
       gsap.to('.hero-frame-inner', {
-        yPercent: 8, ease: 'none',
+        yPercent: -8, ease: 'none',
         scrollTrigger: { trigger: root.current, start: 'top top', end: 'bottom top', scrub: true },
       })
       gsap.to('.hero-name', {
@@ -72,7 +72,7 @@ export default function Hero({ ready }) {
             <span className="line-mask" aria-hidden="true"><em><Letters text="Priya" /></em></span>
           </h1>
           <p className="hero-role hero-fade">
-            {profile.role} <span className="hero-sep" aria-hidden="true" /> {profile.degree}
+            <span className="nowrap">{profile.role}</span> <span className="hero-sep" aria-hidden="true" /> <span className="nowrap">{profile.degree}</span>
           </p>
           <p className="hero-intro hero-fade">{profile.intro}</p>
           <div className="hero-ctas hero-fade">
@@ -87,7 +87,7 @@ export default function Hero({ ready }) {
             <span className="hero-arch hero-arch-line" aria-hidden="true" />
             <div className="hero-frame">
               <div className="hero-frame-inner">
-                <img src={asset(profile.photo)} alt={`Portrait of ${profile.name} ${profile.surname}`} width="1080" height="1440" fetchPriority="high" />
+                <img src={asset(profile.photo)} alt={`Portrait of ${profile.name} ${profile.surname}`} width="1200" height="1600" fetchPriority="high" />
               </div>
             </div>
 
