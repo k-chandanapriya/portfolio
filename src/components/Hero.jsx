@@ -4,10 +4,14 @@ import { gsap, asset, prefersReducedMotion } from '../motion'
 import { ArrowUpRight, Download } from './Icons'
 import '../styles/hero.css'
 
-const Letters = ({ text }) =>
-  text.split('').map((c, i) => (
-    <span className="hero-letter" key={i}>{c}</span>
-  ))
+// letters animate individually, but the word wrapper never breaks across lines
+const Letters = ({ text }) => (
+  <span className="hero-word">
+    {text.split('').map((c, i) => (
+      <span className="hero-letter" key={i}>{c}</span>
+    ))}
+  </span>
+)
 
 export default function Hero({ ready }) {
   const root = useRef(null)
