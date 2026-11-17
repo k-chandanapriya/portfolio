@@ -55,7 +55,7 @@ export default function Hero({ ready }) {
         </div>
 
         <figure className="hero-photo">
-          <img src={asset(profile.photo)} alt={`Portrait of ${profile.name} ${profile.surname}`} width="720" height="960" fetchPriority="high" />
+          <img src={asset(profile.photo)} alt={`Portrait of ${profile.name} ${profile.surname}`} width="1080" height="1440" fetchPriority="high" />
           <figcaption className="hero-badge">
             <span className="dot" /> Based in {profile.location}
           </figcaption>
