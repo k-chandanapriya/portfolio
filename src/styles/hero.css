@@ -16,7 +16,7 @@
 .hero-name {
   font-family: var(--serif); font-weight: 600;
   /* "Chandana" is ~4.7em wide: 20cqi keeps it inside its column at every screen size */
-  font-size: min(20cqi, 164px); line-height: 0.92; letter-spacing: -0.045em;
+  font-size: clamp(48px, 9vw, 150px); /* fallback for browsers without container units */ line-height: 0.92; letter-spacing: -0.045em;
   margin: 24px 0 28px;
 }
 .hero-name em { color: var(--accent); }
@@ -61,3 +61,7 @@
   .hero-foot span:last-child { display: none; }
 }
 .hero-name .line-mask { padding-bottom: 0.14em; margin-bottom: -0.14em; }
+
+@supports (width: 1cqi) {
+  .hero-name { font-size: min(20cqi, 164px); }
+}
