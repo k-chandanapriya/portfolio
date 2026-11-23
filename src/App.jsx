@@ -3,7 +3,6 @@ import Lenis from 'lenis'
 import { gsap, ScrollTrigger, prefersReducedMotion } from './motion'
 import Loader from './components/Loader'
 import Nav from './components/Nav'
-import GridLines from './components/GridLines'
 import Hero from './components/Hero'
 import Marquee from './components/Marquee'
 import About from './components/About'
@@ -31,7 +30,6 @@ export default function App() {
   return (
     <>
       {!ready && <Loader onDone={onLoaded} />}
-      <GridLines />
       <Nav />
       <main>
         <Hero ready={ready} />
