@@ -1,13 +1,13 @@
 .contact { overflow: hidden; padding-bottom: 32px; }
 .contact-glow {
   position: absolute; left: 50%; bottom: -40vw; width: 110vw; height: 80vw; transform: translateX(-50%);
-  background: radial-gradient(closest-side, rgba(255, 90, 54, 0.28), transparent);
+  background: radial-gradient(closest-side, rgba(255, 143, 107, 0.3), rgba(246, 166, 193, 0.12) 60%, transparent);
   filter: blur(30px); pointer-events: none;
 }
 .contact .container { position: relative; }
 .contact-title {
   font-family: var(--serif); font-weight: 400; letter-spacing: -0.03em;
-  font-weight: 600; font-size: clamp(48px, 9.5vw, 150px); line-height: 0.95; margin-top: 24px;
+  font-weight: 400; font-size: clamp(48px, 9.5vw, 150px); line-height: 0.95; margin-top: 24px;
 }
 .contact-title em { color: var(--accent); }
 .contact-title .line-mask { padding-bottom: 0.12em; margin-bottom: -0.12em; }
@@ -28,16 +28,16 @@
 .contact-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 28px; }
 .contact-link {
   display: flex; align-items: center; gap: 12px; padding: 22px 24px;
-  border: 1px solid var(--line); border-radius: 20px; background: rgba(22, 20, 18, 0.7);
-  font-weight: 500; transition: border-color 0.4s var(--ease), transform 0.4s var(--ease), background 0.4s;
+  border: 1px solid var(--line); border-radius: 4px; background: rgba(244, 242, 237, 0.75);
+  font-weight: 400; transition: border-color 0.4s var(--ease), transform 0.4s var(--ease), background 0.4s;
 }
 .contact-link svg { width: 18px; height: 18px; flex-shrink: 0; }
 .contact-link svg:last-child { margin-left: auto; color: var(--dim); transition: transform 0.4s var(--ease), color 0.4s; }
 .contact-link:hover { border-color: var(--line-2); transform: translateY(-3px); }
 .contact-link:hover svg:last-child { transform: translate(3px, -3px); color: var(--accent); }
-.contact-link.is-accent { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.contact-link.is-accent { background: var(--ink); color: var(--card); border-color: var(--accent); }
 .contact-link.is-accent svg:last-child { margin-left: 0; color: inherit; }
-.contact-link.is-accent:hover { background: var(--text); border-color: var(--text); }
+.contact-link.is-accent:hover { background: var(--accent); border-color: var(--accent); }
 
 .footer {
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;

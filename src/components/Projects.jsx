@@ -45,7 +45,7 @@ export default function Projects() {
         <div className="work-stack">
           {featured.map((p, i) => (
             <article className="work-card" key={p.title} style={{ top: `calc(110px + ${i * 18}px)` }}>
-              <div className="work-card-inner">
+              <div className="work-card-inner ticks">
                 <div className="work-card-top">
                   <span className="work-index">0{i + 1}</span>
                   <span className="chip">{p.tag}</span>

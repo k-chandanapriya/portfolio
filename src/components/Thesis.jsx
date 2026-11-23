@@ -45,7 +45,7 @@ export default function Thesis() {
           <p className="reveal">{thesis.summary}</p>
           <div className="thesis-inputs reveal">
             {inputs.map((i) => (
-              <div className="thesis-input" key={i.label}>
+              <div className="thesis-input ticks" key={i.label}>
                 <span className="thesis-input-icon" aria-hidden="true">{i.icon}</span>
                 <strong>{i.label}</strong>
                 <small>{i.note}</small>
