@@ -12,7 +12,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/chandanapriyak',
   github: 'https://github.com/k-chandanapriya',
   cv: 'Chandana-Priya-Kummarigunta-CV.pdf',
-  photo: 'chandana.jpg?v=vivid',
+  photo: 'chandana.jpg?v=nova',
   intro:
     'I turn cutting-edge AI into products people can trust. I fine-tune large language models, build RAG systems that reach 95.7% Recall@5, and engineer real-time ML pipelines that score transactions in under 10 ms. Fast, accurate and ready for the real world.',
   about: [
@@ -20,6 +20,17 @@ export const profile = {
     'I care about measurable results: retrieval quality, model accuracy, latency and security. I approach every system with a systematic, experimental mindset. I am looking for an entry-level role in AI/ML engineering, data science or software development in Germany.',
   ],
 }
+
+// typed one after another in the hero's terminal box
+export const prompts = [
+  'Fine-tune Gemini 1.5 Flash with LoRA, rank 16',
+  'Build hybrid RAG over 73,540 vectors',
+  'Answer elderly users by voice, text and image',
+  'Score card transactions in under 10 ms',
+]
+
+// labels with leader lines beside the hero photo
+export const focus = ['LLM fine-tuning', 'RAG pipelines', 'Multimodal AI', 'Real-time ML']
 
 export const stats = [
   { value: 73540, label: 'vectors indexed in my thesis RAG pipeline', format: 'int' },
