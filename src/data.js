@@ -61,6 +61,16 @@ export const thesis = {
 
 export const projects = [
   {
+    title: 'Briefly',
+    subtitle: 'AI assistant for German official letters',
+    tag: 'Personal project, full stack',
+    description:
+      'Reads photos or PDFs of letters from the tax office, immigration office or broadcasting fee service, explains them in plain English, calculates the legally correct deadline and drafts a German reply. A deterministic engine applies the 4-day delivery rule, BGB month counting and holidays for all 16 states, so no deadline depends on AI. A private local pipeline (Ollama, Qwen2.5-VL) transcribes, extracts and cross-checks dates, IBANs and reference numbers with regex. Outputs .ics reminders, EPC GiroCode payment QR codes and DIN 5008 reply letters.',
+    metrics: ['19 letter types', '13 reply templates', 'All 16 Bundesländer', '53 automated tests'],
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'SQLModel', 'Ollama', 'Qwen2.5-VL', 'Groq', 'Claude API', 'pytest', 'GitHub Actions'],
+    link: 'https://github.com/k-chandanapriya/German-Bureaucracy-AI-Assistant',
+  },
+  {
     title: 'FraudStream',
     subtitle: 'Real-time credit card fraud detection',
     tag: 'Personal project',
@@ -150,11 +160,11 @@ export const timeline = [
 ]
 
 export const skills = [
-  { group: 'LLMs & Generative AI', items: ['LLM fine-tuning (LoRA)', 'RAG', 'LangChain', 'Gemini (Vertex AI)', 'OpenAI API', 'Prompt engineering'] },
+  { group: 'LLMs & Generative AI', items: ['LLM fine-tuning (LoRA)', 'RAG', 'LangChain', 'Gemini (Vertex AI)', 'OpenAI API', 'Claude API', 'Ollama (local LLMs)', 'Prompt engineering'] },
   { group: 'Information Retrieval', items: ['FAISS', 'BM25', 'Hybrid search', 'Reciprocal Rank Fusion', 'Sentence-transformers', 'Cross-encoder reranking'] },
   { group: 'Machine Learning', items: ['XGBoost', 'TensorFlow', 'PyTorch (fundamentals)', 'Deep learning', 'Feature engineering', 'Imbalanced data', 'Recall@k, PR-AUC, mAP'] },
   { group: 'Programming', items: ['Python', 'Java', 'JavaScript', 'R', 'SQL'] },
-  { group: 'Backend & Frontend', items: ['FastAPI', 'REST APIs', 'React.js', 'Streamlit'] },
+  { group: 'Backend & Frontend', items: ['FastAPI', 'REST APIs', 'React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Streamlit'] },
   { group: 'Data & Streaming', items: ['Apache Kafka', 'BigQuery', 'Pub/Sub', 'Real-time pipelines'] },
   { group: 'Google Cloud', items: ['Vertex AI', 'Cloud Run', 'Firestore', 'Speech-to-Text / TTS', 'Vision AI', 'Document AI', 'IAM'] },
   { group: 'DevOps & Security', items: ['Docker', 'Docker Compose', 'CI/CD', 'SonarQube', 'Bandit', 'Trivy'] },
@@ -168,5 +178,5 @@ export const languages = [
 
 export const marquee = [
   'RAG', 'LLM Fine-tuning', 'Multimodal AI', 'Vertex AI', 'Gemini', 'LangChain', 'FAISS',
-  'XGBoost', 'Apache Kafka', 'FastAPI', 'React', 'Docker', 'MLOps',
+  'XGBoost', 'Apache Kafka', 'FastAPI', 'React', 'Next.js', 'Ollama', 'Docker', 'MLOps',
 ]

@@ -38,7 +38,7 @@ export default function Projects() {
             </h2>
           </div>
           <p className="work-lede reveal">
-            From real-time fraud scoring to multilingual healthcare assistants, every project is measured by recall, latency and reliability.
+            From an AI assistant for German official letters to real-time fraud scoring and multilingual healthcare assistants, every project is measured by recall, latency and reliability.
           </p>
         </div>
 
