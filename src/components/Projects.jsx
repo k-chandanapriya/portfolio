@@ -64,10 +64,19 @@ export default function Projects() {
                   <div className="work-stack-chips">
                     {p.stack.map((t) => <span className="chip" key={t}>{t}</span>)}
                   </div>
-                  {p.link && (
-                    <a className="btn work-link" href={p.link} target="_blank" rel="noreferrer">
-                      View on GitHub <ArrowUpRight />
-                    </a>
+                  {(p.live || p.link) && (
+                    <div className="work-links">
+                      {p.live && (
+                        <a className="btn btn-primary work-link" href={p.live} target="_blank" rel="noreferrer">
+                          Open live app <ArrowUpRight />
+                        </a>
+                      )}
+                      {p.link && (
+                        <a className="btn work-link" href={p.link} target="_blank" rel="noreferrer">
+                          View on GitHub <ArrowUpRight />
+                        </a>
+                      )}
+                    </div>
                   )}
                 </div>
               </div>

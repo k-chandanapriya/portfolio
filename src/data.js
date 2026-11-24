@@ -69,6 +69,7 @@ export const projects = [
     metrics: ['19 letter types', '13 reply templates', 'All 16 Bundesländer', '53 automated tests'],
     stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'SQLModel', 'Ollama', 'Qwen2.5-VL', 'Groq', 'Claude API', 'pytest', 'GitHub Actions'],
     link: 'https://github.com/k-chandanapriya/German-Bureaucracy-AI-Assistant',
+    live: 'https://k-chandanapriya.github.io/German-Bureaucracy-AI-Assistant/#scan',
   },
   {
     title: 'FraudStream',

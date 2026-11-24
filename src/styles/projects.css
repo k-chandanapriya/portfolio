@@ -48,3 +48,4 @@
   .work-card { position: relative; top: auto !important; }
   .work-card-inner { min-height: 0; }
 }
+.work-links { display: flex; flex-wrap: wrap; gap: 10px; }
